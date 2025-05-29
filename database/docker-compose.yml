@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15
+    container_name: prices-manager-db
+    environment:
+      POSTGRES_USER: joabresper
+      POSTGRES_PASSWORD: joabresper
+      POSTGRES_DB: prices-manager
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  pgdata:
