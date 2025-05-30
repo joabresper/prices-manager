@@ -26,4 +26,5 @@ model Product {
   name        String
   description String?
   price       Float
+  discount    Float? @default(0)
 }
