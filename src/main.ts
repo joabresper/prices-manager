@@ -5,8 +5,10 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   app.enableCors({
-    origin: 'http://127.0.0.1:5501',
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    // origin: 'http://127.0.0.1:5501',
+    // methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    origin: 'https://prices-manager.onrender.com/',
+    methods: 'GET,POST,PUT,DELETE',
     credentials: true,
   });
 
